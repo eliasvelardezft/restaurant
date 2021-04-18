@@ -1,0 +1,26 @@
+{
+  "devDependencies": {
+    "webpack": "^5.33.2",
+    "webpack-cli": "^4.6.0"
+  },
+  "dependencies": {
+    "email-js": "^2.0.2"
+  },
+  "name": "restaurant",
+  "description": "Responsive restaurant website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eliasvelardezft/restaurant.git"
+  },
+  "author": "elias",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eliasvelardezft/restaurant/issues"
+  },
+  "homepage": "https://github.com/eliasvelardezft/restaurant#readme"
+}
