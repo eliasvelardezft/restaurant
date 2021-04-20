@@ -14,6 +14,7 @@ class FoodWrapper {
     let img = document.createElement('img');
     img.setAttribute('src', `../src/images/specialties/${this.img}.jpg`);
     img.setAttribute('class', 'specialty-img');
+    img.setAttribute('style', 'width: 350px;');
 
     let p = document.createElement('p');
     p.innerHTML = this.description;
