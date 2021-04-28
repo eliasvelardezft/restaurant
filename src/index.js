@@ -1,7 +1,7 @@
 import { generateMain } from './sections/main'
-import { generateSpecialties } from './sections/specialties'
-// import { generateServices } from './sections/services'
-import { generateAbout } from './sections/about'
+import { generateProjects } from './sections/projects'
+import { generateSkills } from './sections/skills'
+import { generateExperience } from './sections/experience'
 import { generateContact } from './sections/contact'
 
 let navBar = document.getElementById('navbar');
@@ -14,22 +14,22 @@ mainLink.addEventListener('click', () => {
   generateMain();
 });
 
-let specialtiesLink = document.getElementById('specialties-link');
-specialtiesLink.addEventListener('click', () => {
+let projectsLink = document.getElementById('projects-link');
+projectsLink.addEventListener('click', () => {
   container.innerHTML = '';
-  generateSpecialties();
+  generateProjects();
 });
 
-// let servicesLink = document.getElementById('services-link');
-// servicesLink.addEventListener('click', () => {
-//   container.innerHTML = '';
-//   generateServices();
-// });
-
-let aboutLink = document.getElementById('about-link');
-aboutLink.addEventListener('click', () => {
+let experienceLink = document.getElementById('experience-link');
+experienceLink.addEventListener('click', () => {
   container.innerHTML = '';
-  generateAbout();
+  generateExperience();
+});
+
+let skillsLink = document.getElementById('skills-link');
+skillsLink.addEventListener('click', () => {
+  container.innerHTML = '';
+  generateSkills();
 });
 
 let contactLink = document.getElementById('contact-link');

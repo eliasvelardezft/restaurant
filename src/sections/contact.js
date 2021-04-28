@@ -3,6 +3,7 @@ import { serviceID, templateID, userID } from '../secrets/emailjs'
 function generateContact() {
 
   let container = document.getElementById('container');
+  container.setAttribute('class', 'contact-container');
   let form = `<div id='contact-div'>
                 <form class='cf' id='form'>
                   <div class='half left cf'>

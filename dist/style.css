@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Merriweather);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 *,
 *:before,
 *:after {
@@ -7,17 +8,6 @@
   box-sizing: border-box;
 }
 
-html, body {
-  background: #f1f1f1;
-  font-family: 'Merriweather', sans-serif;
-  padding: 1em;
-}
-
-h1 {
-  text-align: center;
-  color: #a8a8a8;
-  text-shadow: 1px 1px 0 white;
-}
 
 form {
   max-width: 600px;
@@ -94,4 +84,84 @@ form textarea {
 
 .cf:after {
   clear: both;
+}
+
+/* **************************** GLOBAL SECTION **************************** */
+/* DARK COLOR PALETTE
+Dark blue (almost black): #1b1b2f
+Dark blue (not that dark): #162447
+Blue (kind of greyish): #1f4068
+Red: #e43f5a */
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 30px;
+  background-color: #1f1f2b;
+  padding: 20px;
+  color: #ece2e2;
+  font-family: monospace, 'Noto Sans', sans-serif;
+}
+
+
+#navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+  position: absolute;
+  bottom: 0;
+  transition: all 0s ease-out;
+}
+#navbar li {
+  padding: 30px;
+}
+#navbar li:hover {
+  animation-name: font-size;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+@keyframes font-size {
+  100% {
+    transform: scale(1.2);
+  }
+}
+/* **************************** MAIN SECTION **************************** */
+.main-container {
+  display: grid;
+  grid-template-areas: 
+  'name photo'
+  'title title'
+  'paragraph paragraph';
+  justify-items: center;
+  align-items: center;
+}
+#main-img {
+  width: 250px;
+  border-radius: 100%;
+  grid-area: photo;
+}
+.main-container h1 {
+  grid-area: name;
+}
+.main-container h2 {
+  padding-top: 40px;
+  grid-area: title;
+  justify-self: center;
+}
+.main-container p {
+  grid-area: paragraph;
+}
+/* **************************** PROJECTS SECTION **************************** */
+.projects-container {
+}
+/* **************************** EXPERIENCE SECTION **************************** */
+.experience-container {
+}
+/* **************************** SKILLS SECTION **************************** */
+.skills-container {
+}
+/* **************************** CONTACT SECTION **************************** */
+.contact-container {
 }

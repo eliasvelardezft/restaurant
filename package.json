@@ -1,27 +1,23 @@
 {
-  "devDependencies": {
-    "gh-pages": "^3.1.0",
-    "webpack": "^5.33.2",
-    "webpack-cli": "^4.6.0"
-  },
-  "dependencies": {
-    "email-js": "^2.0.2"
-  },
-  "name": "restaurant",
-  "description": "Responsive restaurant website",
+  "name": "personalpage",
   "version": "1.0.0",
+  "description": "personal landing page",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eliasvelardezft/restaurant.git"
+    "url": "git+ssh://git@github.com/eliasvelardezft/personalPage.git"
   },
   "author": "elias",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/eliasvelardezft/restaurant/issues"
+    "url": "https://github.com/eliasvelardezft/personalPage/issues"
   },
-  "homepage": "https://github.com/eliasvelardezft/restaurant#readme"
+  "homepage": "https://github.com/eliasvelardezft/personalPage#readme",
+  "devDependencies": {
+    "webpack": "^5.35.1",
+    "webpack-cli": "^4.6.0"
+  }
 }
