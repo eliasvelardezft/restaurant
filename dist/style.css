@@ -10,7 +10,7 @@
 
 
 form {
-  max-width: 600px;
+  max-width: 500px;
   text-align: center;
   margin: 20px auto;
 }
@@ -27,7 +27,8 @@ form input, form textarea {
   display: block;
   width: 100%;
   margin-top: 1em;
-  font-family: 'Merriweather', sans-serif;
+  margin-bottom: 1em;
+  font-family: monospace, 'Noto Sans', 'PT Sans', sans-serif;
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
@@ -97,13 +98,24 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  line-height: 30px;
+  line-height: 35px;
   background-color: #1f1f2b;
-  padding: 20px;
+  padding: 40px;
   color: #ece2e2;
-  font-family: monospace, 'Noto Sans', sans-serif;
+  font-family: monospace, 'Noto Sans', 'PT Sans', sans-serif;
+  font-size: 20px;
 }
 
+h1 {
+  font-size: 52px;
+}
+h2 {
+  font-size: 33px;
+}
+
+.visible {
+  width: 100%;
+}
 
 #navbar {
   display: flex;
@@ -128,7 +140,7 @@ body {
   }
 }
 /* **************************** MAIN SECTION **************************** */
-.main-container {
+#main-container {
   display: grid;
   grid-template-areas: 
   'name photo'
@@ -136,32 +148,75 @@ body {
   'paragraph paragraph';
   justify-items: center;
   align-items: center;
+  opacity: 0;
+  transform: scale(0);
+  transition: .6s ease opacity, .6s ease transform;
 }
 #main-img {
-  width: 250px;
+  width: 290px;
   border-radius: 100%;
   grid-area: photo;
 }
-.main-container h1 {
+#main-container h1 {
   grid-area: name;
 }
-.main-container h2 {
+#main-container h2 {
   padding-top: 40px;
   grid-area: title;
   justify-self: center;
 }
-.main-container p {
+#main-container p {
   grid-area: paragraph;
+  
 }
 /* **************************** PROJECTS SECTION **************************** */
-.projects-container {
+#projects-container {
+  opacity: 0;
+  transform: scale(0);
+  transition: .6s ease opacity, .6s ease transform;
 }
 /* **************************** EXPERIENCE SECTION **************************** */
-.experience-container {
+#experience-container {
+  opacity: 0;
+  transform: scale(0);
+  transition: .6s ease opacity, .6s ease transform;
 }
 /* **************************** SKILLS SECTION **************************** */
-.skills-container {
+#skills-container {
+  opacity: 0;
+  transform: scale(0);
+  transition: .6s ease opacity, .6s ease transform;
 }
 /* **************************** CONTACT SECTION **************************** */
-.contact-container {
+#contact-container {
+  opacity: 0;
+  transform: scale(0);
+  transition: .6s ease opacity, .6s ease transform;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+#contact-container ul {
+  display: flex;
+  list-style: none;
+}
+#contact-container ul li {
+  padding: 30px;
+}
+#contact-container ul li:hover {
+  animation-name: size;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+@keyframes size {
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+#social-links img{
+  width: 80px;
+  filter: invert(.95);
 }

@@ -1,9 +1,11 @@
 import { serviceID, templateID, userID } from '../secrets/emailjs'
 
 function generateContact() {
-
-  let container = document.getElementById('container');
-  container.setAttribute('class', 'contact-container');
+  console.log("generating contact");
+  let container = document.getElementById('contact-container');
+  container.setAttribute('style', 'display: flex;');
+  container.setAttribute('class', 'visible');
+  let formContainer = document.getElementById('contact-form-container');
   let form = `<div id='contact-div'>
                 <form class='cf' id='form'>
                   <div class='half left cf'>
@@ -17,7 +19,7 @@ function generateContact() {
                   <input type='submit' value='Submit' id='input-submit'>
                 </form>
               </div>`
-  container.innerHTML = form;
+  formContainer.innerHTML += form;
 
   const btn = document.getElementById('input-submit');
   
